@@ -16,7 +16,32 @@ export class StartPage implements OnInit {
   icon: 'appstore',
   nombre: 'Sheet Detail',
   ruta: '/action-sheet'
- }
+ },
+ {
+   icon: 'person',
+   nombre: 'Avatar',
+   ruta: '/avatar'
+  },
+  {
+    icon: 'radio-button-on',
+    nombre: 'Botones',
+    ruta: '/botones'
+   },
+   {
+     icon: 'card',
+     nombre: 'Cards',
+     ruta: '/cards'
+    },
+    {
+      icon: 'list',
+      nombre: 'Chechboxes',
+      ruta: '/checboxes'
+     },
+     {
+       icon: 'calendar',
+       nombre: 'Calendario',
+       ruta: '/calendar'
+      }
 
   ]
   constructor() { }

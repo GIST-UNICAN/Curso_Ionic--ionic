@@ -1,0 +1,11 @@
+<app-header titulo="Check Buttons"></app-header>
+
+<ion-content>
+    <ion-list>
+    <ion-item *ngFor="let entry of form" (click)="onClick(entry)">
+      <ion-label>{{entry.val}}</ion-label>
+      <ion-checkbox [color]="entry.val" slot="end" [(ngModel)]="entry.isChecked"
+      (ionChange)="onChange($event)"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>

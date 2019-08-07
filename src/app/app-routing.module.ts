@@ -6,6 +6,11 @@ const routes: Routes = [
   { path: 'start', loadChildren: './paginas/start/start.module#StartPageModule' },
   { path: 'alert', loadChildren: './paginas/alert/alert.module#AlertPageModule' },
   { path: 'action-sheet', loadChildren: './paginas/action-sheet/action-sheet.module#ActionSheetPageModule' },
+  { path: 'avatar', loadChildren: './paginas/avatar/avatar.module#AvatarPageModule' },
+  { path: 'botones', loadChildren: './paginas/botones/botones.module#BotonesPageModule' },
+  { path: 'cards', loadChildren: './paginas/cards/cards.module#CardsPageModule' },
+  { path: 'checboxes', loadChildren: './paginas/checboxes/checboxes.module#ChecboxesPageModule' },
+  { path: 'calendar', loadChildren: './paginas/calendar/calendar.module#CalendarPageModule' },
 ];
 
 @NgModule({
