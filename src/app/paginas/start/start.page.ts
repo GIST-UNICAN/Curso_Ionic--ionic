@@ -41,7 +41,12 @@ export class StartPage implements OnInit {
        icon: 'calendar',
        nombre: 'Calendario',
        ruta: '/calendar'
-      }
+      },
+      {
+        icon: 'add',
+        nombre: 'Fab',
+        ruta: '/fab'
+       }
 
   ]
   constructor() { }
