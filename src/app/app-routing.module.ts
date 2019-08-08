@@ -13,6 +13,11 @@ const routes: Routes = [
   { path: 'calendar', loadChildren: './paginas/calendar/calendar.module#CalendarPageModule' },
   { path: 'fab', loadChildren: './paginas/fab/fab.module#FabPageModule' },
   { path: 'grid-row', loadChildren: './paginas/grid-row/grid-row.module#GridRowPageModule' },
+  { path: 'infinite', loadChildren: './paginas/infinite/infinite.module#InfinitePageModule' },
+  { path: 'input', loadChildren: './paginas/input/input.module#InputPageModule' },
+  { path: 'list', loadChildren: './paginas/list/list.module#ListPageModule' },
+  { path: 'list-reaorde', loadChildren: './paginas/list-reaorde/list-reaorde.module#ListReaordePageModule' },
+  { path: 'loading', loadChildren: './paginas/loading/loading.module#LoadingPageModule' },
 ];
 
 @NgModule({

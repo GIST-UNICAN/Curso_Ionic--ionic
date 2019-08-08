@@ -12,4 +12,8 @@ export class GridRowPage implements OnInit {
   ngOnInit() {
   }
 
+  itemClicked(event){
+    console.log(event)
+  }
+
 }

@@ -4,9 +4,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
     <ion-img src="/assets/gatito.jpg"></ion-img>
-<ion-list>
+<ion-list padding>
   <ion-item *ngFor="let elemento of elementos"
   [routerLink]="elemento.ruta" detail>
     <ion-icon slot="start" [name]="elemento.icon"> </ion-icon>

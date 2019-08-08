@@ -51,7 +51,32 @@ export class StartPage implements OnInit {
          icon: 'grid',
          nombre: 'Grid-Row',
          ruta: '/grid-row'
-        }
+        },
+        {
+          icon: 'infinite',
+          nombre: 'Infinite scroll',
+          ruta: '/infinite'
+         },
+         {
+           icon: 'hammer',
+           nombre: 'Formularios',
+           ruta: '/input'
+          },
+          {
+            icon: 'list-box',
+            nombre: 'Download list',
+            ruta: '/list'
+           },
+           {
+             icon: 'reorder',
+             nombre: 'Reorder List',
+             ruta: '/list-reaorde'
+            },
+            {
+              icon: 'refresh-circle',
+              nombre: 'Loading',
+              ruta: '/loading'
+             }
 
   ]
   constructor() { }
