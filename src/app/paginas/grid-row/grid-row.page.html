@@ -1,0 +1,23 @@
+<app-header titulo="Ion-Grid Ion Row"></app-header>
+
+<ion-content padding>
+<ion-grid fixed>  
+  <ion-row>
+    <ion-col  size="12" size-lg="3" size-md="4" size-sd="6"
+              *ngFor="let item of data; let i =index" >
+      <ion-card>
+        <ion-img src="/assets/gatito.jpg"></ion-img>
+        <ion-card-header>
+          <ion-card-subtitle>
+          </ion-card-subtitle>
+          <ion-card-title>Tarjetita: {{i+1}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero hic quae quas necessitatibus non doloribus ex? Possimus, in ratione fugit dolorum dolores blanditiis numquam nulla architecto mollitia dolorem quisquam facere!</ion-label>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>

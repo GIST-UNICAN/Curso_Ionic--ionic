@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'checboxes', loadChildren: './paginas/checboxes/checboxes.module#ChecboxesPageModule' },
   { path: 'calendar', loadChildren: './paginas/calendar/calendar.module#CalendarPageModule' },
   { path: 'fab', loadChildren: './paginas/fab/fab.module#FabPageModule' },
+  { path: 'grid-row', loadChildren: './paginas/grid-row/grid-row.module#GridRowPageModule' },
 ];
 
 @NgModule({

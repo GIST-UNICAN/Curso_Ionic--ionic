@@ -46,7 +46,12 @@ export class StartPage implements OnInit {
         icon: 'add',
         nombre: 'Fab',
         ruta: '/fab'
-       }
+       },
+       {
+         icon: 'grid',
+         nombre: 'Grid-Row',
+         ruta: '/grid-row'
+        }
 
   ]
   constructor() { }
