@@ -1,5 +1,8 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="menuApp"></ion-menu-button>
+      </ion-buttons>
     <ion-title>start</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,7 +10,7 @@
 <ion-content >
     <ion-img src="/assets/gatito.jpg"></ion-img>
 <ion-list padding>
-  <ion-item *ngFor="let elemento of elementos"
+  <ion-item *ngFor="let elemento of elementos | async"
   [routerLink]="elemento.ruta" detail>
     <ion-icon slot="start" [name]="elemento.icon"> </ion-icon>
     <ion-label>{{elemento.nombre}}</ion-label>

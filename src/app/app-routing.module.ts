@@ -18,6 +18,8 @@ const routes: Routes = [
   { path: 'list', loadChildren: './paginas/list/list.module#ListPageModule' },
   { path: 'list-reaorde', loadChildren: './paginas/list-reaorde/list-reaorde.module#ListReaordePageModule' },
   { path: 'loading', loadChildren: './paginas/loading/loading.module#LoadingPageModule' },
+  { path: 'modal', loadChildren: './paginas/modal/modal.module#ModalPageModule' },
+  { path: 'popover', loadChildren: './paginas/popover/popover.module#PopoverPageModule' },
 ];
 
 @NgModule({
