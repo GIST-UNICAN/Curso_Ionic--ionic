@@ -20,6 +20,11 @@ const routes: Routes = [
   { path: 'loading', loadChildren: './paginas/loading/loading.module#LoadingPageModule' },
   { path: 'modal', loadChildren: './paginas/modal/modal.module#ModalPageModule' },
   { path: 'popover', loadChildren: './paginas/popover/popover.module#PopoverPageModule' },
+  { path: 'progress', loadChildren: './paginas/progress/progress.module#ProgressPageModule' },
+  { path: 'refrescador', loadChildren: './paginas/refrescador/refrescador.module#RefrescadorPageModule' },
+  { path: 'buscador', loadChildren: './paginas/buscador/buscador.module#BuscadorPageModule' },
+  { path: 'segment', loadChildren: './paginas/segment/segment.module#SegmentPageModule' },
+  { path: 'slides', loadChildren: './paginas/slides/slides.module#SlidesPageModule' },
 ];
 
 @NgModule({

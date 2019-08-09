@@ -1,0 +1,22 @@
+<app-header titulo="Refresher"></app-header>
+
+<ion-content padding>
+
+  
+
+      <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content>
+
+        </ion-refresher-content>
+      </ion-refresher>
+
+      <ion-label *ngIf="data.length===0" text-center> <h1>Tira para refrescar</h1></ion-label>
+
+      <ion-list *ngIf="data.length>0" >
+        <ion-item *ngFor="let item of data; let i=index" >
+          <ion-label>Elemento:</ion-label>
+          <ion-label slot="end" text-right>{{i}}</ion-label>
+        </ion-item>
+      </ion-list>
+
+</ion-content>

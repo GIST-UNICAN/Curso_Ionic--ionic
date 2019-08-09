@@ -78,6 +78,31 @@
                     "icon": "tablet-landscape",
                     "nombre": "Popover",
                     "ruta": "/popover"
-                   }
+                   },
+                   {
+                     "icon": "repeat",
+                     "nombre": "Progressbar y Range",
+                     "ruta": "/progress"
+                    },
+                    {
+                      "icon": "refresh",
+                      "nombre": "Refresher",
+                      "ruta": "/refrescador"
+                     },
+                     {
+                       "icon": "search",
+                       "nombre": "Searchbar",
+                       "ruta": "/buscador"
+                      },
+                      {
+                        "icon": "copy",
+                        "nombre": "Segment",
+                        "ruta": "/segment"
+                       },
+                       {
+                         "icon": "albums",
+                         "nombre": "Slides",
+                         "ruta": "/slides"
+                        }
     
       ]
