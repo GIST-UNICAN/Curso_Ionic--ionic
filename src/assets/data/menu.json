@@ -103,6 +103,11 @@
                          "icon": "albums",
                          "nombre": "Slides",
                          "ruta": "/slides"
-                        }
+                        },
+                        {
+                          "icon": "folder-open",
+                          "nombre": "Tabs",
+                          "ruta": "/tabs/avatar"
+                         }
     
       ]

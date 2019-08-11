@@ -25,6 +25,7 @@ const routes: Routes = [
   { path: 'buscador', loadChildren: './paginas/buscador/buscador.module#BuscadorPageModule' },
   { path: 'segment', loadChildren: './paginas/segment/segment.module#SegmentPageModule' },
   { path: 'slides', loadChildren: './paginas/slides/slides.module#SlidesPageModule' },
+  { path: 'tabs', loadChildren: './paginas/tabs/tabs.module#TabsPageModule' },
 ];
 
 @NgModule({
