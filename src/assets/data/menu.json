@@ -108,6 +108,11 @@
                           "icon": "folder-open",
                           "nombre": "Tabs",
                           "ruta": "/tabs/avatar"
-                         }
+                         },
+                         {
+                           "icon": "today",
+                           "nombre": "Toast",
+                           "ruta": "/toast"
+                          }
     
       ]
