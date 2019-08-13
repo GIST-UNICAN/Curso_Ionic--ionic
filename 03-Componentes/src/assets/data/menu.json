@@ -1,0 +1,118 @@
+[
+    {
+     "icon": "american-football",
+     "nombre": "alert",
+     "ruta": "/alert"
+    },
+    {
+      "icon": "appstore",
+      "nombre": "Sheet Detail",
+      "ruta": "/action-sheet"
+     },
+     {
+       "icon": "person",
+       "nombre": "Avatar",
+       "ruta": "/avatar"
+      },
+      {
+        "icon": "radio-button-on",
+        "nombre": "Botones",
+        "ruta": "/botones"
+       },
+       {
+         "icon": "card",
+         "nombre": "Cards",
+         "ruta": "/cards"
+        },
+        {
+          "icon": "list",
+          "nombre": "Chechboxes",
+          "ruta": "/checboxes"
+         },
+         {
+           "icon": "calendar",
+           "nombre": "Calendario",
+           "ruta": "/calendar"
+          },
+          {
+            "icon": "add",
+            "nombre": "Fab",
+            "ruta": "/fab"
+           },
+           {
+             "icon": "grid",
+             "nombre": "Grid-Row",
+             "ruta": "/grid-row"
+            },
+            {
+              "icon": "infinite",
+              "nombre": "Infinite scroll",
+              "ruta": "/infinite"
+             },
+             {
+               "icon": "hammer",
+               "nombre": "Formularios",
+               "ruta": "/input"
+              },
+              {
+                "icon": "list-box",
+                "nombre": "Download list",
+                "ruta": "/list"
+               },
+               {
+                 "icon": "reorder",
+                 "nombre": "Reorder List",
+                 "ruta": "/list-reaorde"
+                },
+                {
+                  "icon": "refresh-circle",
+                  "nombre": "Loading",
+                  "ruta": "/loading"
+                 },
+                 {
+                   "icon": "phone-portrait",
+                   "nombre": "Modal",
+                   "ruta": "/modal"
+                  },
+                  {
+                    "icon": "tablet-landscape",
+                    "nombre": "Popover",
+                    "ruta": "/popover"
+                   },
+                   {
+                     "icon": "repeat",
+                     "nombre": "Progressbar y Range",
+                     "ruta": "/progress"
+                    },
+                    {
+                      "icon": "refresh",
+                      "nombre": "Refresher",
+                      "ruta": "/refrescador"
+                     },
+                     {
+                       "icon": "search",
+                       "nombre": "Searchbar",
+                       "ruta": "/buscador"
+                      },
+                      {
+                        "icon": "copy",
+                        "nombre": "Segment",
+                        "ruta": "/segment"
+                       },
+                       {
+                         "icon": "albums",
+                         "nombre": "Slides",
+                         "ruta": "/slides"
+                        },
+                        {
+                          "icon": "folder-open",
+                          "nombre": "Tabs",
+                          "ruta": "/tabs/avatar"
+                         },
+                         {
+                           "icon": "today",
+                           "nombre": "Toast",
+                           "ruta": "/toast"
+                          }
+    
+      ]

@@ -1,0 +1,20 @@
+<app-header titulo="Calendario"></app-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label>MM DD YY</ion-label>
+        <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>MMMM DD YY</ion-label>
+          <ion-datetime displayFormat="MMMM DD YY" value="{{hoy| date: 'yyyy-MM-dd'}}"
+          (ionChange)="fechaCambio($event)"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>mostrando hoy desde ngModel</ion-label>
+            <ion-datetime displayFormat="MMMM DD YY" 
+            [ngModel]="hoy.toISOString()"
+            (ionChange)="fechaCambio($event)"></ion-datetime>
+          </ion-item>
+</ion-content>
