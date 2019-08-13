@@ -1,0 +1,15 @@
+<ion-header no-border>
+  <ion-toolbar color="dark">
+    <ion-title>
+      Favoritos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark" >
+
+  <ion-label class="centrado"  *ngIf="loadNews.noticias_favoritas.length===0"  text-center>No hay noticias guardadas</ion-label>
+
+<app-noticias *ngIf="loadNews.noticias_favoritas" [news]= "loadNews.noticias_favoritas"></app-noticias>
+
+</ion-content>
