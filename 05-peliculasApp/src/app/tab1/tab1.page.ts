@@ -11,10 +11,9 @@ export class Tab1Page implements OnInit{
 
   peliculasRecientes: Pelicula[]=[];
 
-  slideOpts={
-    slidesPerView: 1.2,
-    freeMode: true
-  }
+  populares:Pelicula[]=[]
+
+  
 
   constructor(private descargaPelis: MoviesService ) {}
 
@@ -23,6 +22,10 @@ export class Tab1Page implements OnInit{
       console.log(resp)
       this.peliculasRecientes=resp.results;
     });
+    this.descargaPelis.getPopulares().subscribe(resp=>{
+      console.log ('populares', resp)
+      this.populares=resp.results;//.splice(1,resp.results.length);
+    })
   }
 
 }

@@ -1,7 +1,8 @@
-import { RespuestaMDB } from './../interfaces/interfaces';
+import { RespuestaMDB, fechas } from './../interfaces/interfaces';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { DefaultValueAccessor } from '@angular/forms';
 
 
 const URL= environment.url;
@@ -22,9 +23,7 @@ export class MoviesService {
   }
 
 
-
-  getFeature(){
-
+  getFechas<fechas>(){
     const hoy = new Date()
     const ultimoDia= new Date(hoy.getFullYear(), hoy.getMonth()+1, 0).getDate();
     let mes= hoy.getMonth()+1;
@@ -39,7 +38,27 @@ export class MoviesService {
     const inicio= `${hoy.getFullYear()}-${mesString}-01`
     const fin= `${hoy.getFullYear()}-${mesString}-${ultimoDia}`
 
+    let devuelve: fechas;
+    devuelve={inicio: inicio, fin: fin};
+    return devuelve
 
-    return this.ejecutarQuery<RespuestaMDB>(`/discover/movie?primary_release_date.gte=${inicio}&primary_release_date.lte=${fin}`) 
+  }
+
+  getPopulares(){
+
+    const fechas: fechas =this.getFechas()
+
+    const query= `/discover/movie?sort_by=popularyty.desc&primary_release_date.gte=${fechas.inicio}&primary_release_date.lte=${fechas.fin}`
+    return this.ejecutarQuery<RespuestaMDB>(query) 
+
+  }
+
+
+
+  getFeature(){
+
+    const fechas: fechas =this.getFechas()
+
+    return this.ejecutarQuery<RespuestaMDB>(`/discover/movie?primary_release_date.gte=${fechas.inicio}&primary_release_date.lte=${fechas.fin}`) 
   }
 }

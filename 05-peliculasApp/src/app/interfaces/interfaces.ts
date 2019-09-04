@@ -21,3 +21,8 @@ export interface RespuestaMDB {
     total_pages: number;
     results: Pelicula[];
 }
+
+export interface fechas{
+    inicio: string;
+    fin: string;
+}
