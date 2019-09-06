@@ -1,4 +1,4 @@
-import { RespuestaMDB, fechas } from './../interfaces/interfaces';
+import { RespuestaMDB, fechas, PeliculaDetalle, RespuestaActores } from './../interfaces/interfaces';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -11,7 +11,9 @@ const apiKey= environment.apiKey;
 @Injectable({
   providedIn: 'root'
 })
-export class MoviesService {
+export class MoviesService{
+
+  private popularesPage: number =0;
 
   constructor(private http: HttpClient) { }
 
@@ -23,7 +25,7 @@ export class MoviesService {
   }
 
 
-  getFechas<fechas>(){
+  getFechas<fechas> () {
     const hoy = new Date()
     const ultimoDia= new Date(hoy.getFullYear(), hoy.getMonth()+1, 0).getDate();
     let mes= hoy.getMonth()+1;
@@ -38,17 +40,21 @@ export class MoviesService {
     const inicio= `${hoy.getFullYear()}-${mesString}-01`
     const fin= `${hoy.getFullYear()}-${mesString}-${ultimoDia}`
 
-    let devuelve: fechas;
-    devuelve={inicio: inicio, fin: fin};
+    //let devuelve: fechas;
+    let devuelve = new fechas() //{inicio: inicio, fin: fin};
+    devuelve.inicio=inicio;
+    devuelve.fin=fin;
     return devuelve
 
   }
 
   getPopulares(){
 
+    this.popularesPage ++;
+
     const fechas: fechas =this.getFechas()
 
-    const query= `/discover/movie?sort_by=popularyty.desc&primary_release_date.gte=${fechas.inicio}&primary_release_date.lte=${fechas.fin}`
+    const query= `/discover/movie?sort_by=popularyty.desc&primary_release_date.gte=${fechas.inicio}&primary_release_date.lte=${fechas.fin}&page=${this.popularesPage}`
     return this.ejecutarQuery<RespuestaMDB>(query) 
 
   }
@@ -60,5 +66,14 @@ export class MoviesService {
     const fechas: fechas =this.getFechas()
 
     return this.ejecutarQuery<RespuestaMDB>(`/discover/movie?primary_release_date.gte=${fechas.inicio}&primary_release_date.lte=${fechas.fin}`) 
+  }
+
+
+  getDetalles(filmId: string){
+    return this.ejecutarQuery<PeliculaDetalle>(`/movie/${filmId}?a=1`)
+  }
+
+  getActores(filmId: string){
+    return this.ejecutarQuery<RespuestaActores>(`/movie/${filmId}/credits?a=1`)
   }
 }

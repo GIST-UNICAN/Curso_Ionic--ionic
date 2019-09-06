@@ -30,5 +30,6 @@
           
         </ion-row>
       </ion-grid>
-    <app-slideshow-pares [peliculas]="populares"></app-slideshow-pares>
+    <app-slideshow-pares [peliculas]="populares"
+                          (cargarMas)="cargarSiguientes()"></app-slideshow-pares>
 </ion-content>
