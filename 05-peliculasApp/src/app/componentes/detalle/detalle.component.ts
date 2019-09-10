@@ -1,4 +1,5 @@
-import { ModalController } from '@ionic/angular';
+import { LocaldataService } from './../../services/localdata.service';
+import { ModalController, ToastController } from '@ionic/angular';
 import { Cast, PeliculaDetalle } from './../../interfaces/interfaces';
 import { MoviesService } from './../../services/movies.service';
 import { Component, OnInit, Input } from '@angular/core';
@@ -12,6 +13,8 @@ export class DetalleComponent implements OnInit {
 
   @Input() pelicula: string;
 
+
+  estrella="star-outline"
   actores: Cast[]=[]
   detallesPelicula: PeliculaDetalle={};
   oculto =150;
@@ -23,10 +26,12 @@ export class DetalleComponent implements OnInit {
   }
 
   constructor(private movieService: MoviesService,
-              private modalCtrl: ModalController) { }
+              private modalCtrl: ModalController,
+              private localData: LocaldataService,
+              public toastController: ToastController) { }
 
-  ngOnInit() {
-    console.log("ID", this.pelicula)
+   ngOnInit() {
+    this.localData.existePelicula(this.pelicula).then(existe=>this.estrella=(existe)? 'star': 'star-outline') ;
     this.movieService.getDetalles(this.pelicula).subscribe(resp=>{
       this.detallesPelicula=resp;
       //console.log(resp)
@@ -43,7 +48,9 @@ export class DetalleComponent implements OnInit {
   }
 
   favorito(){
-
+    const existe=this.localData.guardarPelicula(this.detallesPelicula)
+    this.estrella=(existe)? 'star': 'star-outline';
+    
   }
-
+ 
 }
